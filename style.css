@@ -1,0 +1,239 @@
+*{
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+	list-style: none;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: montserrat;
+	background-color: black;
+}
+
+nav{
+	background: black;
+	height: 100px;
+	width: 100%;
+}
+
+
+.logo_container{
+	height: 100%;
+	font-size: 40px;
+	display: table;
+	float: left;
+	padding: 0 50px;
+}
+
+.logo_container a h1{
+	padding: 15px;
+	color: white;
+	height: 100%;
+	font-family: 'Monserrat';
+	font-size: 32px;
+	font-weight: 200;
+	color: lime;
+}
+
+
+/*
+label.logo{
+	color: lime;
+	font-size: 35px;
+	line-height: 80px;
+	padding: 0 100px;
+	font-weight: bold;
+}
+
+
+
+
+label.logo span{
+	padding: 15px;
+	color: white;
+	height: 100%;
+	font-family: 'Monserrat';
+	font-size: 32px;
+	font-weight: 200;
+	color: lime;
+} */
+
+
+
+
+nav ul {
+	float: right;
+	margin-right: 20px;
+
+}
+
+nav ul li {
+	display: inline-block;
+	line-height: 80px;
+	margin: 0 15px;
+}
+
+nav ul li a{
+	color: lime;
+	font-size: 17px;
+	padding: 7px 13px;
+	/*text-transform: uppercase;*/
+	border-radius: 3px
+}
+
+
+a.active,a:hover{
+	color: white;
+	background: darkorange;
+	transition: .5s;
+}
+
+#check{
+	display: none;
+}
+
+.checkbtn{
+	font-size: 30px;
+	color: lime;
+	float: right;
+	line-height: 80px;
+	margin-right: 40px;
+	cursor: pointer;
+	display: none;
+}
+
+@media (max-width: 952px) {
+	label.logo{
+		font-size: 30px;
+		padding-left: 50px;
+	}
+
+	nav ul li a{
+		font-size: 20px;
+	}
+
+}
+
+
+/* smallest size for mobile view*/
+@media (max-width: 858px){
+	.checkbtn{
+		display: block;
+	}
+
+	ul{
+		position: fixed;
+		width: 100%;
+		height: 100vh;
+		background: #2c3e50;
+		top: 80px;
+		left: -100%;
+		text-align: center;
+		transition: all .5s;
+	}
+
+	nav ul li{
+		display: block;
+	}
+
+	nav ul li a{
+		font-size: 40px
+	}
+
+	a:hover,a.active{
+		background: none;
+		color: cyan;
+	}
+
+	#check:checked ~ ul{
+		left: 0;
+	}
+
+}
+
+@keyFrames slideInLeft{
+	from{
+		transform: translateX(10px);
+	}
+
+	to{
+		transform: translateX(-400px);
+	}
+
+}
+
+.slideInLeft{
+	animation: slideInLeft;
+	animation-duration: 3s;
+	color: lime;
+
+}
+
+/* this is for the ABOUT section */
+.bio{
+
+    padding: 40px;
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+
+.bio h1{
+	color: lime;
+}
+
+.experience{
+    padding: 16px;
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+
+.experience h1{
+	color: lime;
+}
+
+.experience table{
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.SINGLE-SERVICE{
+    position: relative;
+    text-align: center;
+    margin bottom: 32px;
+
+}
+
+.SINGLE-SERVICE h4 {
+    padding: 0px 16px;
+    color: lime;
+
+}
+
+
+/*this  is for the contact section*/
+.contact{
+	padding: 40px;
+	background-color: black;
+	color: white;
+	text-align: center;
+}
+
+.contact p{
+	color: lime;
+}
+
+.contact h1{
+	color: lime;
+}
+
+.contact h3{
+	color: lime;
+}
+
+video {
+	width: 100%;
+}
