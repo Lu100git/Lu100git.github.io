@@ -113,8 +113,8 @@ for (let i = 0; i < rows; i++){
 
 function animate() {
 	window.requestAnimationFrame(animate)
-	if (ball.lives < 1) window.location.href ="lose.html"
-	if (tileCounter >= rows * columns) window.location.href="win.html"
+	if (ball.lives < 1) window.location.href ="../index.html"
+	if (tileCounter >= rows * columns) window.location.href="../index.html"
 
 	// collision between paddle and ball, by moving also changes the x of the ball witch makes it more fun!!!
 	if (ball.collidesWith(paddle) && ball.y < paddle.y) {
@@ -164,23 +164,12 @@ function KEYUP(){
 	else if (event.key == "ArrowRight") right = false
 }
 
-// function process_touchstart() {
-// 	touch = true
-// 	console.log(touch);
-// }
 
-// function process_touchend(){
-// 	touch = false
-// 	console.log(touch)
-// }
 
 window.addEventListener('keyup', KEYUP)
 window.addEventListener('keydown', KEYDOWN, false)
 
-// window.addEventListener("touchstart", process_touchstart, false);
-// window.addEventListener('touchend', process_touchend, false);
 
-//TouchEvent {isTrusted: true, touches: TouchList, targetTouches: TouchList, changedTouches: TouchList, altKey: false, …}
 
 // TOCUH SCREEN IMPLEMENTATION
 let touchHandler = function(event) {
