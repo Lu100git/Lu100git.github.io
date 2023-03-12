@@ -27,7 +27,7 @@ class Rect{
 		this.w = w
 		this.h = h
 		this.color = color
-		this.velocity = {x: 2, y: 10}
+		this.velocity = {x: 2, y: 4}
 		this.speed = 12
 		this.alive = true
 		this.lives = 5
