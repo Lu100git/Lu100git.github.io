@@ -25,7 +25,7 @@ class Ball {
         this.h = h
         this.color = color
 
-        this.velocity = { x: 8, y: 12 }
+        this.velocity = { x: 8, y: 6 }
         this.initialX = x
         this.initialY = y
         this.score1 = 0
