@@ -1,1 +1,1 @@
-this is my official website howsted by gihub
+this is my official website hosted by gihub
