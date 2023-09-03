@@ -182,7 +182,7 @@ function animate(){
 
 	else{
 		//alert("OOF!, Game Over, your score was: " + player.score)
-		window.location.href = "index.html"
+		window.location.href = "snake.html"
 	}
 }
 animate()
