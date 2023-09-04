@@ -198,26 +198,27 @@ a.active,a:hover{
 
 }
 
-
 /*this  is for the contact section*/
 .contact{
-	padding: 40px;
+	padding: 20px;
 	background-color: black;
 	color: white;
 	text-align: center;
 }
 
 .contact p{
-	color: lime;
+	color: greenyellow;
 }
 
 .contact h1{
-	color: lime;
+	color: greenyellow;
 }
 
 .contact h3{
-	color: lime;
+	color: greenyellow;
 }
+
+
 
 video {
 /*	position: relative;
