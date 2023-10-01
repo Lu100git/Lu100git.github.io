@@ -113,15 +113,30 @@ const keys = {
 
 
 ball = new Ball(512, 20, 20, 20, "white")
-paddle1 = new Paddle(10, WINDOW_HEIGHT / 2, 12, 100, "red")
-paddle2 = new Paddle(WINDOW_WIDTH - 22, WINDOW_HEIGHT / 2, 12, 100, "purple")
+paddle1 = new Paddle(10, WINDOW_HEIGHT / 2, 12, 140, "red")
+paddle2 = new Paddle(WINDOW_WIDTH - 22, WINDOW_HEIGHT / 2, 12, 140, "purple")
 
-const choices = ["y", "n", "y", "n", "y", "n", "y", "n", "y", "y"]
+const choices = ["y", "n", "y", "n", "y", "y", "y", "n", "y", "y"]
 let randomIndex = 0
 let randomChoice = ""
 
+// used to calculate the frames
+let msPrev = window.performance.now()
+const fps = 60
+const msPerFrame = 1000 / fps
+let frames = 0
+
 function animate() {
     window.requestAnimationFrame(animate)
+
+    // if the display is avove 60hz slow down the code to 60 fps
+    const msNow = window.performance.now()
+    const msPassed = msNow - msPrev
+    if (msPassed < msPerFrame) return
+    const excessTime = msPassed % msPerFrame
+    msPrev = msNow - excessTime
+    //frames++
+
 
     // paddle movement
     paddle1.speed = 0
@@ -134,17 +149,19 @@ function animate() {
     randomChoice = choices[randomIndex]
 
     if (randomChoice == "y") {
-        if (ball.velocity.y < 0) paddle2.speed = -16
-        else if (ball.velocity.y > 0) paddle2.speed = 16
+        if (ball.velocity.y < 0) paddle2.speed = -6
+        else if (ball.velocity.y > 0) paddle2.speed = 6
         if (ball.x < 0 || ball.x > WINDOW_WIDTH || ball.velocity.x < 0) paddle2.speed = 0
     }
 
     //collision detection
     if (ball.collidesWith(paddle1)) {
-        if (ball.x > paddle1.x) ball.changeX()
+        ball.changeX()
     }
     else if (ball.collidesWith(paddle2)) {
-        if (ball.x < paddle2.x) ball.changeX()
+        paddle2.speed = 0
+        ball.changeX()
+
     }
 
     // render
@@ -166,6 +183,8 @@ function animate() {
     rect(512, 0, 2, WINDOW_HEIGHT, 'white')
 
 } animate()
+
+//setInterval(() => {console.log(frames)}, 1000)
 
 // EVENTS
 window.addEventListener('keydown', (event) => {
