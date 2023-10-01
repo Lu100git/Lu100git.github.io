@@ -27,7 +27,7 @@ class Rect{
 		this.w = w
 		this.h = h
 		this.color = color
-		this.velocity = {x: 2, y: 4}
+		this.velocity = {x: 4, y: 6}
 		this.speed = 12
 		this.alive = true
 		this.lives = 5
@@ -92,7 +92,7 @@ class Ball extends Rect{
 
 // creating the objects
 const ball = new Ball(WINDOW_WIDTH / 2, WINDOW_HEIGHT / 2, 10, 10, 'white')
-const paddle = new Paddle(WINDOW_WIDTH / 2, 500, 100, 10, 'white')
+const paddle = new Paddle(WINDOW_WIDTH / 2, 500, 120, 10, 'white')
 
 //colors for the tiles
 let colorIndex = 5
@@ -111,8 +111,23 @@ for (let i = 0; i < rows; i++){
 	colorIndex--
 }
 
+// used to calculate the frames
+let msPrev = window.performance.now()
+const fps = 60
+const msPerFrame = 1000 / fps
+let frames = 0
+
 function animate() {
 	window.requestAnimationFrame(animate)
+
+	// if the display is avove 60hz slow down the code to 60 fps
+	const msNow = window.performance.now()
+	const msPassed = msNow - msPrev
+	if (msPassed < msPerFrame) return
+	const excessTime = msPassed % msPerFrame
+	msPrev = msNow - excessTime
+	//frames++
+
 	if (ball.lives < 1) window.location.href ="../index.html"
 	if (tileCounter >= rows * columns) window.location.href="../index.html"
 
@@ -146,6 +161,9 @@ function animate() {
 
 
 } animate()
+
+//double checking the frames
+//setInterval(() => {console.log(frames)}, 1000)
 
 // EVENTS and variables for controls
 var left = false
@@ -196,5 +214,4 @@ let touchHandler = function(event) {
 window.addEventListener('touchstart', touchHandler, false);
 window.addEventListener('touchmove', touchHandler, false);
 window.addEventListener('touchend', touchHandler, false);
-
 
