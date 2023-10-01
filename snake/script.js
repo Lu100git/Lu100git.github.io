@@ -1,8 +1,5 @@
 const canvas = document.querySelector('canvas')
 const ctx = canvas.getContext('2d')
-canvas.width = 1280
-canvas.height = 720
-
 
 
 WIDTH = canvas.width
@@ -118,7 +115,7 @@ class Snake{
 
 // creating the snake player and the food
 const player = new Snake(TILE_SIZE * 5, TILE_SIZE * 10, 25, 25, "lime")
-const food = new Rect(randomX(), randomY(), TILE_SIZE, TILE_SIZE, "red")
+const food = new Rect(randomX(), randomY(), TILE_SIZE - 5, TILE_SIZE - 5, "red")
 
 
 // creating the tiles, ceil works better than floor
@@ -135,10 +132,26 @@ for (var i = 0; i < columns; ++i){
 }
 
 gameOver = false
+
+// used to calculate the frames
+let msPrev = window.performance.now()
+const fps = 60
+const msPerFrame = 1000 / fps
+let frames = 0
+
 function animate(){
 	if(!gameOver){
 		window.requestAnimationFrame(animate)
-		window_fill("DarkBlue")
+		
+		// if the display is avove 60hz slow down the code to 60 fps
+		const msNow = window.performance.now()
+		const msPassed = msNow - msPrev
+		if (msPassed < msPerFrame) return
+		const excessTime = msPassed % msPerFrame
+		msPrev = msNow - excessTime
+		//frames++
+
+		window_fill("Indigo")
 
 		// prevent the food from going out of bounds
 		if (food.x > WIDTH) food.x = WIDTH - TILE_SIZE * 2
@@ -169,7 +182,7 @@ function animate(){
 
 		//                 render                            ///
         //uncomment the line bellow to see the tiles
-		//tiles.forEach((tile) => {tile.draw()}) 
+		// tiles.forEach((tile) => {tile.draw()}) 
 		player.draw()
 		player.update()
 		food.draw()
@@ -184,8 +197,14 @@ function animate(){
 		//alert("OOF!, Game Over, your score was: " + player.score)
 		window.location.href = "snake.html"
 	}
+
+
+
 }
 animate()
+//double checking the frames
+//setInterval(() => {console.log(frames)}, 1000)
+
 
 // events:
 addEventListener('keydown', changeDirection, false)
