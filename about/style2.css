@@ -10,9 +10,9 @@ body {
 }
 
 .header{
-  background-image: url("./assets/Space-Background-2.jpg");
+  background-image: url("../assets/SpaceBackground-4.jpg");
   background-repeat: no-repeat;
-/*  background-position: 50% 50%;*/
+  background-position: 50% 50%;
   background-size:100%;
   color: lime;
   padding: 40px;
@@ -61,12 +61,37 @@ body {
   width: 100%;
 }
 
+
+
+.content{
+  color: whitesmoke;
+  width: 80%;
+}
+
+.box-title{
+  display: inline-block;
+  margin-left: 40%;
+  background-color: purple;
+  color: greenyellow;
+  border-radius: 25px;
+  padding: 10px 10px 10px 10px;
+  font-size: 40px;
+  font-family: American Typewritrter, serif;
+}
+
+
+.text-box{
+   width: 80%;
+   padding: 10px;
+   border: 5px solid lime;
+   margin-left: 8%;
+}
+
 /*when the page is full screen hide the burger button*/
 #check{
   display: none;
 }
-/*regardless if the screen is full size or not give these properties*/
-/*to the burger button*/
+
 .checkbtn{
   font-size: 30px;
   color: lime;
@@ -79,9 +104,51 @@ body {
 
 
 
-/* smallest size for mobile view*/
+/*table settings*/
+.main-table {
+  font-family: American Typewritrter, serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.main-table td, .main-table th {
+  border: 1px solid lime;
+  padding: 8px;
+}
+
+/*.main-table tr:nth-child(even){
+  background-color: greyblue;
+}*/
+
+/*.main-table tr:hover {
+  background-color: #ddd;
+}*/
+
+.main-table th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: greenyellow;
+  color: purple;
+}
+
+
+.certificate{
+  margin-left:30%;
+}
+
+.certificate h4 {
+    padding: 0px 16px;
+    color: lime;
+}
+
+.certificate img{
+  width: 400px;
+  height: 200px;
+}
+
 @media (max-width: 858px){
-/*  display the burger button when loaded on mobile*/
+
   .checkbtn{
     display: block;
   }
@@ -96,11 +163,10 @@ body {
     color: black;
   }
 
-/*  send the menu to the left soit ill be hidden*/
   .header ul{
     position: relative;
     width: 100%;
-/*    height: 600px;*/
+    height: 600px;
     left: -100%;
     text-align: center;
     transition: all .5s;
@@ -114,9 +180,17 @@ body {
     font-size: 40px
   }
 
-/*  if the burger button is clicked, it will be either yes or no*/
-/*if it's a yes bring the menu to the main screen*/
+
   #check:checked ~ ul {
     left: 0;
   }
+
+  .box-title{
+    margin-left: 0%;
+  }
+
+  .certificate{
+    margin-left: 0%;
+  }
 }
+*/

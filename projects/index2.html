@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="style2.css">
+    <link rel="icon" href="../assets/logo.png">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <title> Sector [4]  </title>
+  </head>
+
+	<body>
+		<header class="header">
+						
+						<input type="checkbox" id="check">
+						<label for="check" class="checkbtn"> <i class="fas fa-bars"></i> </label>
+
+						<span class="title"> <a href="../index.html">  Sector [4] </a> </span>
+
+						<ul>
+							<li> <a href="../index2.html"> Principio </a> </li>
+							<li> <a href="../about/index2.html"> Acerca de mi </a> </li>
+							<li> <a href="index2.html"> Projectos </a> </li>
+							<li> <a href="../contact/index2.html"> Contacto </a> </li>
+
+						<select id="language_button">
+							<option value=""> Lenguaje </option>
+							<option value="english"> English </option>
+							<option value="spanish"> Spanish </option>
+						</select>
+
+
+						<!-- > THIS SCRIPT IS USED FOR THE LNGUAGE MENU TO CAPTUR THE EVENT AND REDIRECT IN WE NEED TO CHANGE THE LANGUAGE <-->
+						<script>
+							document.addEventListener('DOMContentLoaded', () => {
+								document.getElementById('language_button')
+								document.addEventListener('input', handleSelect)
+							})
+
+							function handleSelect(ev) {
+								let select = ev.target
+								if (select.value == "spanish") {
+									window.location.href="index2.html"
+								}
+								else if (select.value == "english") {
+									window.location.href="index.html"
+								}
+								console.log(select.value)
+							}
+						</script>
+					</ul>						
+
+		</header>
+
+		<hr class="divider">
+	
+		<content class="content">
+			<span class="box-title">Git hub</span>
+			<div class="text-box">
+				<h2>Todos mis projectos y codigo esta aqui: <a href="https://github.com/Lu100git"> https://github.com/Lu100git </a> </h2>
+			</div>
+
+			<br>
+
+			<span class="box-title">Juegos en JavaScript</span>
+			
+			<div class="text-box">
+				<h2> <a href="../games/breakout/index.html"> Breakout </a> controles: flechas del teclado [←] [→], touch screen funciona tambien </h2>
+			</div>
+
+			<div class="text-box">
+				<h2> <a href="../games/snake/index.html"> vibora </a> solo para teclado, controles: flechas [↑] [↓] [←] [→]</h2>
+			</div>
+
+			<div class="text-box">
+				<h2> <a href="../games/crossy/index.html"> Crossy </a> solo para el teclado, controles: flechas [↑] [↓]</h2>
+			</div>
+
+			<span class="box-title">otros projectos</span>
+			
+			<div class="text-box">
+				<h2> <a href="../bubble-sort/index.html"> algoritmo burbuja </a> un effecto visual de como funciona el algoritmo burbuja </h2>
+			</div>
+
+		</content>
+	</body>
+</html>

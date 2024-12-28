@@ -1,0 +1,48 @@
+*{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+}
+
+canvas{
+	width: 40%;
+	padding-left:25%;
+}
+
+
+body {
+  background: black;
+}
+
+.header{
+  background-image: url("../../assets/Space-Background-2.jpg");
+  background-repeat: no-repeat;
+  background-size:100%;
+  color: lime;
+  padding: 40px;
+}
+
+.title{
+  display: inline-block;
+  background-color: black;
+  border-radius: 15px;
+  padding: 10px 10px 10px 10px;
+}
+
+.title a{
+  color: lime;
+  font-size: 40px;
+  font-family: American Typewritrter, serif;
+}
+
+
+.divider{
+  color: lime;
+  width: 100%;
+}
+
+
+.bottom-text{
+  color: lime;
+}

@@ -10,9 +10,9 @@ body {
 }
 
 .header{
-  background-image: url("./assets/Space-Background-2.jpg");
+  background-image: url("./assets/SpaceBackground-4.jpg");
   background-repeat: no-repeat;
-/*  background-position: 50% 50%;*/
+  background-position: 50% 50%;
   background-size:100%;
   color: lime;
   padding: 40px;
@@ -50,8 +50,8 @@ body {
 }
 
 .header li a:hover{
-  color: indigo;
-  background: lawngreen;
+  color: white;
+  background: orange;
   transition: .2s;
 }
 
@@ -120,3 +120,4 @@ body {
     left: 0;
   }
 }
+

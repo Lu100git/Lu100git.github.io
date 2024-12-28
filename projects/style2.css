@@ -10,9 +10,9 @@ body {
 }
 
 .header{
-  background-image: url("./assets/Space-Background-2.jpg");
+  background-image: url("../assets/SpaceBackground-4.jpg");
   background-repeat: no-repeat;
-/*  background-position: 50% 50%;*/
+  background-position: 50% 50%;
   background-size:100%;
   color: lime;
   padding: 40px;
@@ -78,6 +78,29 @@ body {
 }
 
 
+.content{
+  color: lime;
+}
+
+.box-title{
+  display: inline-block;
+  margin-left: 40%;
+  background-color: purple;
+  color: greenyellow;
+  border-radius: 25px;
+  padding: 10px 10px 10px 10px;
+  font-size: 40px;
+  font-family: American Typewritrter, serif;
+}
+
+.text-box{
+   width: 40%;
+   padding: 10px;
+   border: 5px solid lime;
+   margin-left: 25%;
+}
+
+
 
 /* smallest size for mobile view*/
 @media (max-width: 858px){
@@ -118,5 +141,13 @@ body {
 /*if it's a yes bring the menu to the main screen*/
   #check:checked ~ ul {
     left: 0;
+  }
+
+  .box-title{
+    margin-left: 10%;
+  }
+
+  .text-box{
+    margin-left: 10%;
   }
 }
