@@ -69,9 +69,19 @@ body {
 }
 
 @media (max-width: 1000px){
+	.home-button p {
+		margin: 0%;
+		padding: 0%;
+		width: 90%;
+
+	}
+
 	.buttons {
 		float: none;
+		width: 90%;
+		margin-left: 3%;
 	}
+
 	
 	.buttons a{
 		display: block;
@@ -93,7 +103,6 @@ body {
 	.projects{
 		margin: 20% 0 10% 0;
 	}
-
 
 
 	.buttons select{
