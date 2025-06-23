@@ -104,11 +104,19 @@ body {
 }
 
 @media (max-width: 1000px){
+	.home-button p {
+		margin: 0%;
+		padding: 0%;
+		width: 90%;
+
+	}
 
 	.buttons {
 		float: none;
+		width: 90%;
+		margin-left: 3%;
 	}
-	
+
 	.buttons a{
 		display: block;
 	}
@@ -129,9 +137,19 @@ body {
 
 
 	.projects{
-		margin: 20% 0 10% 0;
+		margin-left: 3%;
+		width: 94%;
+
 	}
 
+	.projects h1 {
+		font-size: 20px;
+	}
+
+	.projects-content {
+		margin: 3%;
+		width: 100px;
+	}
 	
 }
 
