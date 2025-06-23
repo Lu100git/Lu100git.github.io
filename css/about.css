@@ -232,8 +232,17 @@ canvas{
 }
 
 @media (max-width: 1000px){
+	.home-button p {
+		margin: 0%;
+		padding: 0%;
+		width: 90%;
+
+	}
+
 	.buttons {
 		float: none;
+		width: 90%;
+		margin-left: 3%;
 	}
 
 	.buttons a{
@@ -259,9 +268,15 @@ canvas{
 	
 	}
 
+	.aboutme{
+		margin: 0%;
+
+	}
+
 	.aboutme h1{
 		margin: 0%;
 		padding: 0%;
+		width: 90%;
 	}
 
 	.aboutme img{
@@ -269,8 +284,21 @@ canvas{
 		height: 200px;
 	}
 
-	.aboutme{
+	.aboutme p{
+		margin: 1%;
+		width: 80%;
+	}
+
+	.main-table{
+		margin: 1%;
+		width: 100px;
+		height: 400px;
+	}
+
+
+	.skill-content{
 		margin: 0%;
+		width: 90%;
 	}
 
 	.certificates img{
