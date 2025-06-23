@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="./css/contact.css">
+		<link rel="icon" href="./assets/logo.png">
+		<title> Sector 4 </title>
+	</head>
+
+	<body>
+
+		<audio id="audio1" src="./audio/UI_Beep_Neutral_02.wav"></audio>
+		<audio id="audio2" src="./audio/UI_Beep_Neutral_28.wav"></audio>
+		<script src="./js/audio.js"></script>
+
+		<div class="home-button" >
+			<a href="./index.html" onclick="handleLinkClick(event)"> 
+				<p> SECTOR [4]</p>
+			</a>
+
+			<div class="buttons">
+				<a href="./index.html" onmouseenter="playHoverSound()" onclick="handleLinkClick(event)" > 
+					<span> Home </span>  
+				</a>
+				
+				<a href="./about.html" onmouseenter="playHoverSound()" onclick="handleLinkClick(event)"> 
+					<span> About </span>  
+				</a>
+				
+				<a href="./projects.html" onmouseenter="playHoverSound()" onclick="handleLinkClick(event)">
+					<span> Projects </span>  
+				</a>
+				
+				<a href="./contact.html" onmouseenter="playHoverSound()" onclick="handleLinkClick(event)"> 
+					<span> Contact  </span>  
+				</a>
+			</div>
+		</div>
+
+        <canvas height="10000" id="mainCanvas"> </canvas>
+        <script>
+            const canvas = document.querySelector('canvas')
+            const ctx = canvas.getContext('2d')
+            canvas.width = window.innerWidth;
+            const TILE_SIZE = 32;
+            const rows = Math.ceil(canvas.height / TILE_SIZE);
+            const columns = Math.ceil(canvas.width / TILE_SIZE);
+            ctx.fillStyle = 'indigo'
+            ctx.fillRect(0,0,canvas.width,canvas.height)
+            for(let i = 0; i < rows; ++i){
+                for(let j = 0; j < columns; ++j){
+                    ctx.fillStyle = 'black';
+                    ctx.fillRect(j * TILE_SIZE, i * TILE_SIZE, TILE_SIZE - 2, TILE_SIZE - 2);   
+                }
+            }
+        </script>
+
+		<div class="projects">
+			 <h1> e-mail </h1>
+			 <h2>onehundredlu@gmail.com</h2>
+			 
+			 <p style="color: indigo;" id="text-to-copy">onehundredlu@gmail.com</p>
+			 <button class="copy-button" onclick="copyToClipboard()">Copy e-mail to Clipboard</button>
+		 
+			 <script>
+				 function copyToClipboard() {
+					 // Get the text content from the paragraph
+					 const text = document.getElementById("text-to-copy").innerText;
+		 
+					 // Use the Clipboard API to copy the text
+					 navigator.clipboard.writeText(text).then(() => {
+						 alert("Text copied to clipboard!");
+					 }).catch(err => {
+						 console.error("Failed to copy text: ", err);
+					 });
+				 }
+			 </script>
+		</div>
+
+	</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+

@@ -1,19 +1,20 @@
 @import url('https://fonts.cdnfonts.com/css/luminari');
 
+ /* normal default zero settings */
 *{
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  text-decoration: none;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	text-decoration: none;
 }
 
 body {
-  background: black;
+	background: black;
 }
 
 .home-button{
 	box-shadow: 0px 0px 50px 33px rgb(13, 255, 0);
-	background-image: url("../../assets/console.png");
+	background-image: url("../assets/console.png");
 	background-repeat: no-repeat;
 	background-position: right;
 	background-size: cover;
@@ -21,7 +22,7 @@ body {
 
 .home-button p{
 	display: inline-block;
-	
+	box-shadow: 0px 0px 50px 13px rgb(10, 169, 1);
 	color: rgb(51, 255, 0);
 	margin: 2%;
 	border: 10px solid rgb(0, 255, 106);
@@ -57,16 +58,17 @@ body {
 	background-color: rgb(187, 255, 0);
 }
 
+.buttons select{
+	font-size: 20px;
+	border: 10px solid indigo;
+	border-radius: 20px;
+	/* padding: 10px; */
+	color: indigo;
+	background-color: rgb(187, 255, 0);
 
-canvas{
-	margin-left: 20%;
-  box-shadow: 0px 0px 50px 13px rgb(10, 169, 1);
-  border: 10px solid limegreen;
-  width: 60%;
 }
 
 @media (max-width: 1000px){
-
 	.buttons {
 		float: none;
 	}
@@ -76,7 +78,6 @@ canvas{
 	}
 	
 	.buttons span{
-	
 		width: 88%;
 		position: relative;
 		border: 5px solid yellowgreen;
@@ -93,9 +94,18 @@ canvas{
 		margin: 20% 0 10% 0;
 	}
 
-	canvas{
-		margin-top: 5%;
-		width: 95%;
-	}
+
+
+	.buttons select{
+		margin: 0%;
+		width: 100%;
 	
+	}
+
+}
+
+
+canvas{
+	position: absolute;
+	z-index: -1;
 }

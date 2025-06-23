@@ -1,11 +1,11 @@
 const canvas = document.querySelector('canvas')
 const ctx = canvas.getContext('2d')
-canvas.width = 1080
+canvas.width = 1280
 canvas.height = 720
 
 WIDTH = canvas.width
 HEIGHT = canvas.height
-TILE_SIZE = 30
+TILE_SIZE = 40
 
 function window_fill(color) {
 	ctx.fillStyle = color
@@ -115,8 +115,8 @@ class Snake{
 }
 
 // creating the snake player and the food
-const player = new Snake(TILE_SIZE * 5, TILE_SIZE * 10, 25, 25, "lime")
-const food = new Rect(randomX(), randomY(), TILE_SIZE - 5, TILE_SIZE - 5, "red")
+const player = new Snake(TILE_SIZE * 5, TILE_SIZE * 10, TILE_SIZE - 1, TILE_SIZE - 1, "lime")
+const food = new Rect(randomX(), randomY(), TILE_SIZE - 1, TILE_SIZE - 1, "red")
 
 
 // creating the tiles, ceil works better than floor
@@ -152,7 +152,8 @@ function animate(){
 		msPrev = msNow - excessTime
 		//frames++
 
-		window_fill("#02072F")
+		//window_fill("#02072F")
+		window_fill("black")
 
 		// prevent the food from going out of bounds
 		if (food.x > WIDTH) food.x = WIDTH - TILE_SIZE * 2
@@ -183,7 +184,7 @@ function animate(){
 
 		//                 render                            ///
         //uncomment the line bellow to see the tiles
-		// tiles.forEach((tile) => {tile.draw()}) 
+		//tiles.forEach((tile) => {tile.draw()}) 
 		player.draw()
 		player.update()
 		food.draw()
@@ -196,7 +197,7 @@ function animate(){
 
 	else{
 		//alert("OOF!, Game Over, your score was: " + player.score)
-		window.location.href = "../../projects/index.html"
+		window.location.href = "../../projects.html"
 	}
 
 

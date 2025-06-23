@@ -1,3 +1,5 @@
+@import url('https://fonts.cdnfonts.com/css/luminari');
+
 *{
   margin: 0;
   padding: 0;
@@ -5,44 +7,101 @@
   text-decoration: none;
 }
 
-canvas{
-	width: 40%;
-	padding-left:25%;
-}
-
-
 body {
   background: black;
 }
 
-.header{
-  background-image: url("../../assets/Space-Background-2.jpg");
-  background-repeat: no-repeat;
-  background-size:100%;
-  color: lime;
-  padding: 40px;
+.home-button{
+	box-shadow: 0px 0px 50px 33px rgb(13, 255, 0);
+	background-image: url("../../assets/console.png");
+	background-repeat: no-repeat;
+	background-position: right;
+	background-size: cover;
 }
 
-.title{
-  display: inline-block;
-  background-color: black;
-  border-radius: 15px;
-  padding: 10px 10px 10px 10px;
+.home-button p{
+	display: inline-block;
+	
+	color: rgb(51, 255, 0);
+	margin: 2%;
+	border: 10px solid rgb(0, 255, 106);
+	padding: 30px;
+
+	font-size: 80px;
 }
 
-.title a{
-  color: lime;
-  font-size: 40px;
-  font-family: American Typewritrter, serif;
+.home-button span{
+	color: limegreen;
+}
+
+/* since this is a div, this rule will apply everything inside the div */
+.buttons{
+	float: right;
+	font-family: 'Luminari', serif;
+	font-size: 20px;
+}
+
+.buttons span{	
+	display: inline-block;
+	border: 10px solid rgb(13, 255, 0);
+	border-radius: 20px;
+	padding: 30px;
+	background-color: black;
+	color: rgb(68, 255, 0);
+}
+
+.buttons span:hover{
+	border: 10px solid indigo;
+	border-radius: 20px;
+	color: indigo;
+	background-color: rgb(187, 255, 0);
 }
 
 
-.divider{
-  color: lime;
-  width: 100%;
+canvas{
+  margin-top: 5%;
+  margin-left: 25%;
+  box-shadow: 0px 0px 50px 13px rgb(10, 169, 1);
+  border: 10px solid limegreen;
+  width: 50%;
+  height: 50%;
+	position: absolute;
+	z-index: -1;
 }
 
 
-.bottom-text{
-  color: lime;
+@media (max-width: 1000px){
+
+	.buttons {
+		float: none;
+	}
+	
+	.buttons a{
+		display: block;
+	}
+	
+	.buttons span{
+	
+		width: 88%;
+		position: relative;
+		border: 5px solid yellowgreen;
+		border-radius: 0%;
+		text-align: center;
+	}
+
+	.buttons span:hover{
+		border: 5px solid indigo;
+
+	}
+	
+	.projects{
+		margin: 20% 0 10% 0;
+	}
+
+	canvas{
+		margin-left: 0;
+		margin-top: 5%;
+		width: 95%;
+	}
+	
 }

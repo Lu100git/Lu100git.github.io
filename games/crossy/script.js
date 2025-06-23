@@ -152,7 +152,7 @@ function animate() {
 	if (player.collidesWith(chest)){
 		if(game.level > 2){
 			alert("You Win!")
-			window.location.href = "../../index.html"
+			window.location.href = "../../projects.html"
 		}
 		alert("NICESU!")
 		player.velocity.y = 0
@@ -164,7 +164,7 @@ function animate() {
 	if (player.collidesWith(enemy) || player.collidesWith(enemy2) || player.collidesWith(enemy3)|| player.collidesWith(enemy4)){
 		if (game.lives < 2) {
 			alert("Game Over!")
-			window.location.href = "../../projects/index.html"
+			window.location.href = "../../projects.html"
 		}
 		alert("OOF!")
 		player.velocity.y = 0

@@ -1,27 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<title> Bubble sort  </title>
+  <head>
           <meta charset="utf-8">
           <meta name="viewport" content="width=device-width, initial-scale=1">
           <link rel="stylesheet" type="text/css" href="style.css">
-          <link rel="icon" href="../../assets/logo.png">
-
-	</head>
-
+          <title> bubble sort </title>
+  </head>
 
 	<body>
-		<header class="header">
 
-			<span class="title"> <a href="../index.html">  Sector [4] </a> </span>
+		<audio id="audio1" src="../audio/UI_Beep_Neutral_02.wav"></audio>
+		<audio id="audio2" src="../audio/UI_Beep_Neutral_28.wav"></audio>
+		<script src="../js/audio.js"></script>
+
+
+		<div class="home-button" >
+			<a href="../index.html" onclick="handleLinkClick(event)"> 
+				<p> SECTOR [4]</p>
+			</a>
+			<div class="buttons">
+				<a href="../index.html" onmouseenter="playHoverSound()" onclick="handleLinkClick(event)" > 
+					<span> Home </span>  
+				</a>
 				
+				<a href="../about.html" onmouseenter="playHoverSound()" onclick="handleLinkClick(event)"> 
+					<span> About </span>  
+				</a>
+				
+				<a href="../projects.html" onmouseenter="playHoverSound()" onclick="handleLinkClick(event)">
+					<span> Projects </span>  
+				</a>
+				
+				<a href="../contact.html" onmouseenter="playHoverSound()" onclick="handleLinkClick(event)"> 
+					<span> Contact  </span>  
+				</a>
+			</div>
+		</div>
 
-		</header>
 
-		<hr class="divider">
-
-
-		<canvas id="myCanvas"> </canvas>
+		<!--<h1>TITTLE</h1>-->
+		<canvas width="640" height="480" id="myCanvas"> </canvas>
 		<script src="script.js"></script>
 	</body>
 </html>

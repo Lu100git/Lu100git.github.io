@@ -128,8 +128,8 @@ function animate() {
 	msPrev = msNow - excessTime
 	//frames++
 
-	if (ball.lives < 1) window.location.href ="../../projects/index.html"
-	if (tileCounter >= rows * columns) window.location.href="../../projects/index.html"
+	if (ball.lives < 1) window.location.href ="../../projects.html"
+	if (tileCounter >= rows * columns) window.location.href="../../projects.html"
 
 	// collision between paddle and ball, by moving also changes the x of the ball witch makes it more fun!!!
 	if (ball.collidesWith(paddle) && ball.y < paddle.y) {

@@ -1,7 +1,7 @@
 const canvas = document.querySelector('canvas')
 const c = canvas.getContext('2d')
-canvas.width = 1024
-canvas.height = 576
+
+
 
 class Line{
 	constructor(color,x,y,w,h){
@@ -22,11 +22,11 @@ class Line{
 	}
 }
 
-const amount = 200
+const amount = canvas.width / 2
 
 const lines = []
 for (let i = 0; i < amount; i++) {
-	lines[i] = new Line("white", 3 * i, 100, 2, Math.floor(Math.random() * 300))
+	lines[i] = new Line("white", 3 * i, canvas.height, 2, -Math.floor(Math.random() * 300))
 }
 
 let counter = 0;
@@ -49,15 +49,8 @@ async function animate(delay = 0.000001) {
 				lines[i + 1].h = aux;
 			}
 		    await new Promise((resolve) => setTimeout(() => { resolve();}, delay));
-		    counter+=0.01
-			console.log(counter)
-			if (counter >= 500) {
-				
-			}
 		}
 	}
-
-
 }
 
 animate()
