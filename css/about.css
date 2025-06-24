@@ -235,13 +235,14 @@ canvas{
 	.home-button p {
 		margin: 0%;
 		padding: 0%;
-		width: 90%;
+		width: 94%;
+		font-size: 60px;
 
 	}
 
 	.buttons {
 		float: none;
-		width: 90%;
+		width: 85%;
 		margin-left: 3%;
 	}
 
@@ -291,10 +292,22 @@ canvas{
 
 	.main-table{
 		margin: 1%;
-		width: 100px;
-		height: 400px;
+		width: 98%;
 	}
 
+	.main-table th{
+		margin: 0%;
+		font-size: 14px;
+		
+	}
+
+	.main-table td{
+		margin: 0%;
+		padding: 0%;
+		font-size: 14px;
+
+		
+	}
 
 	.skill-content{
 		margin: 0%;
