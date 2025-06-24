@@ -107,13 +107,14 @@ body {
 	.home-button p {
 		margin: 0%;
 		padding: 0%;
-		width: 90%;
+		width: 94%;
+		font-size: 60px;
 
 	}
 
 	.buttons {
 		float: none;
-		width: 90%;
+		width: 85%;
 		margin-left: 3%;
 	}
 
@@ -147,8 +148,17 @@ body {
 	}
 
 	.projects-content {
-		margin: 3%;
-		width: 100px;
+		margin: 0%;
+		width: 90%;
+	}
+
+	.projects-content div{
+		width: 80%;
+	}
+
+	.projects-content img {
+		width: 200px;
+		height: 100px;
 	}
 	
 }
