@@ -72,13 +72,14 @@ body {
 	.home-button p {
 		margin: 0%;
 		padding: 0%;
-		width: 90%;
+		width: 94%;
+		font-size: 60px;
 
 	}
 
 	.buttons {
 		float: none;
-		width: 90%;
+		width: 85%;
 		margin-left: 3%;
 	}
 
