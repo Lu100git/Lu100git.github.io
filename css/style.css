@@ -115,6 +115,34 @@ body {
 }
 
 
+.body-box{
+	/* box-shadow: 0px 0px 50px 13px orangered; */
+	margin: 4% 35% 0 35%;
+	border: 1px solid yellowgreen;
+	color: orangered;
+	background-color: black;
+}
+
+
+.message h1{
+	margin-left: 30%;
+	margin-right: 63%;
+	border-radius: 15px;
+	box-shadow: 0px 0px 50px 13px blueviolet;
+	/* padding: 0 45% 0 45%; */
+	border: 2px solid purple;
+	background-color: purple;
+}
+
+.message h3{
+	padding: 1% 0 0 30%;
+	
+}
+
+.message h4{
+	padding: 5% 0 0 30%;
+}
+
 canvas{
 	position: absolute;
 	z-index: -1;
